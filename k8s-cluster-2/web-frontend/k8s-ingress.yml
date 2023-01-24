@@ -1,0 +1,44 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: web-frontend-ingress
+spec:
+  rules:
+  - host: web-frontend.example.com
+    http:
+      paths:
+      - path: /web-frontend
+        pathType: Prefix
+        pathRewrite: /
+        pathRedirect: /
+        pathModRewrite: /
+        pathModRedirect: /
+        pathModReplace: /
+        pathModAppend: /
+        pathModDelete: /
+        pathModInsert: /
+        pathModPrepend: /
+        pathModReplace: /
+        pathModSubstitute: /
+        pathModTrim: /
+        pathModEscape: /
+        pathModUnescape: /
+        pathModUrlDecode: /
+        pathModUrlEncode: /
+        pathModUrlReplace: /
+        pathModUrlAppend: /
+        pathModUrlDelete: /
+        pathModUrlInsert: /
+        pathModUrlPrepend: /
+        pathModUrlReplace: /
+        pathModUrlSubstitute: /
+        pathModUrlTrim: /
+        pathModUrlEscape: /
+        pathModUrlUnescape: /
+        pathModUrlDecode: /
+        pathModUrlEncode: /
+        pathModUrlReplace: /
+        pathModUrlAppend: /
+        pathModUrlDelete: /
+        pathModUrlInsert: /
+       

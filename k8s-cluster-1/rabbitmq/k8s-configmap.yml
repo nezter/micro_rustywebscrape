@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rabbitmq-config
+data:
+  rabbitmq_clustering.erlang_cookie: "secret-cookie"
+  rabbitmq_management.load_definitions: "/etc/rabbitmq/definitions.json"

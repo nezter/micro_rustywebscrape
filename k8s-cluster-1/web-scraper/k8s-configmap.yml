@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: web-scraper-config
+data:
+  scraping-interval: "60"
+  scraping-depth: "3"
+  target-url: "https://carl.me"
