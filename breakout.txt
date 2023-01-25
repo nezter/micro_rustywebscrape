@@ -8,6 +8,56 @@ project-root/
             k8s-deployment.yml
             k8s-service.yml
             k8s-configmap.yml
+- main.go
+- pkg/
+   - rabbitmq/
+        - rabbitmq.go
+        - rabbitmq_test.go
+   - scraper/
+        - scraper.go
+        - scraper_test.go
+   - util/
+        - util.go
+   - error/
+        - error.go
+        - error_test.go
+        - auto-fix/
+            - auto-fix.go
+            - auto-fix_test.go
+   - config/
+        - config.go
+        - config_test.go
+   - monitoring/
+        - monitoring.go
+        - monitoring_test.go
+   - api/
+        - api.go
+        - api_test.go
+        - handlers/
+            - handlers.go
+            - handlers_test.go
+        - middleware/
+            - middleware.go
+            - middleware_test.go
+   - version/
+        - version.go
+        - version_test.go
+   - security/
+        - security.go
+        - security_test.go
+   - cache/
+        - cache.go
+        - cache_test.go
+   - logging/
+        - logging.go
+        - logging_test.go
+   - test/
+        - test.go
+        - test_test.go
+   - ci-cd/
+        - ci-cd.go
+        - ci-cd_test.go
+
     k8s-cluster-2/
         data-processor/
             k8s-deployment.yml
@@ -29,3 +79,101 @@ project-root/
             index.html
             main.js
             main.css
+
+
+
+
+- rabbitmq:
+    - main.go
+    - k8s-deployment.yml
+    - k8s-service.yml
+    - k8s-configmap.yml
+    - config.yml
+    - Dockerfile
+    - README.md
+    - version.txt
+    - log/
+    - internal/
+        - consumer.go
+        - producer.go
+        - queue.go
+
+- data-processor:
+    - main.go
+    - k8s-deployment.yml
+    - k8s-service.yml
+    - k8s-configmap.yml
+    - config.yml
+    - Dockerfile
+    - README.md
+    - version.txt
+    - log/
+    - internal/
+        - data_processing.go
+        - data_validation.go
+        - data_transformation.go
+
+- web-scraper:
+    - main.go
+    - k8s-deployment.yml
+    - k8s-configmap.yml
+    - config.yml
+    - Dockerfile
+    - README.md
+    - version.txt
+    - log/
+    - internal/
+        - web_scraper.go
+        - parser.go
+        - database.go
+
+- web-frontend:
+    - main.go
+    - k8s-deployment.yml
+    - k8s-service.yml
+    - k8s-configmap.yml
+    - config.yml
+    - Dockerfile
+    - README.md
+    - version.txt
+    - log/
+    - internal/
+        - frontend.go
+        - http_server.go
+        - api_client.go
+
+- api:
+    - main.go
+    - k8s-deployment.yml
+    - k8s-service.yml
+    - k8s-configmap.yml
+    - config.yml
+    - Dockerfile
+    - README.md
+    - version.txt
+    - log/
+    - internal/
+        - api.go
+        - auth.go
+        - user.go
+
+- util:
+    - error.go
+    - log.go
+    - config.go
+    - monitoring.go
+    - security.go
+    - version.txt
+    - log/
+
+- test:
+    - rabbitmq_test.go
+    - data-processor_test.go
+    - web-scraper_test.go
+    - web-frontend_test.go
+    - api_test.go
+
+- ci_cd:
+    - Jenkinsfile
+    - deploy.sh
+    - test.sh
